@@ -1,4 +1,4 @@
-const formElement = document.querySelector('.form');
+const formElement = document.forms.form;
 const formInput = formElement.querySelector('.form__input');
 
 let errors = [];
@@ -28,8 +28,8 @@ function checkAll() {
     for (let input of inputs) {
         checkValidity(input);
     }
-    let error = document.querySelector('.error-message');
-    error.innerHTML = errors.join('. \n');
+    let error = document.querySelectorAll('.error-message');
+    error.innerHTML = errors.join('. <br');
 }
 
 formElement.addEventListener('submit', function (event) {
@@ -40,6 +40,8 @@ formElement.addEventListener('submit', function (event) {
 formInput.addEventListener('input', function (evt) {
     console.log(evt.target.value);
 });
+
+
 //document.getElementById('errorsInfo').innerHTML = errors.join('. <br')
 
 //let fields = form.querySelectorAll('.field')

@@ -13,15 +13,17 @@
         <div class="header">
             <h1>Форма регистрации с валидацией</h1>
         </div>
-        <form action='#' name="form" novalidate>
+        <form action='#' name="form" class="form" novalidate>
             <div class="form__list">
                 <label for="name" class="form__label">Имя:</label>
                 <input type="text" name="name" placeholder="Имя" required min="2" max="20" class="form__input field">
+                <span class="error-message" id="name-error"></span>
                 <br />
             </div>
             <div class="form__list">
                 <label for="email" class="form__label">Email:</label>
                 <input type="email" name="email" placeholder="Email" class="form__input field" required>
+                <span class="error-message" id="email-error"></span>
                 <br />
             </div>
             <div class="form__list">
@@ -39,6 +41,7 @@
                 <label for="radio2" class="form__label">Мужчина</label>
                 <input type="radio" name="sex" id="radio2" class="form__input field">
                 <br />
+
             </div>
             <div class="form__list">
                 <label for="profession" class="form__label">Профессия:</label>
@@ -75,8 +78,8 @@
                 <span class="error-message" id="checkbox-error"></span>
                 <br />
             </div>
-            <button type="submit" class="button">Отправить</button>
-            <div id="errorsInfo"></div>
+            <button type="submit" class="button" onclick=checkAll()>Отправить</button>
+            <!--<div id="errorsInfo"></div>-->
     </div>
     </form>
 

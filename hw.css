@@ -40,3 +40,7 @@
     text-align: center;
     border-radius: 10px;
 }
+
+input:required:valid {
+    border-color: rgb(202, 253, 115);
+}
