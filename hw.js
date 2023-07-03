@@ -28,13 +28,14 @@ function checkAll() {
     for (let input of inputs) {
         checkValidity(input);
     }
-    let error = document.querySelectorAll('.error-message');
+    let error = document.querySelector('.error-message');
     error.innerHTML = errors.join('. <br');
 }
 
 formElement.addEventListener('submit', function (event) {
     event.preventDefault();
-    //console.log('Отправка!');
+    console.log('Отправка!');
+
 });
 
 formInput.addEventListener('input', function (evt) {
